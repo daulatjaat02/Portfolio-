@@ -252,7 +252,11 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(33, 125, 187, 0.8);
+  background: linear-gradient(
+    135deg,
+    rgb(82, 229, 231) 10%,
+    rgb(19, 12, 183) 100%
+  );
   z-index: 1;
 }
 #lead-down {
@@ -279,6 +283,10 @@ footer {
   animation: pulsate 1.5s ease;
   animation-iteration-count: infinite;
   padding-top: 5px;
+}
+.c3d {
+  position: relative;
+  z-index: 100;
 }
 @keyframes pulsate {
   0% {
@@ -508,7 +516,11 @@ footer {
 }
 #contact {
   padding: 50px 15px;
-  background: #3498db;
+  background: linear-gradient(
+    135deg,
+    rgb(82, 229, 231) 10%,
+    rgb(19, 12, 183) 100%
+  );
   text-align: center;
 }
 #contact h2 {
