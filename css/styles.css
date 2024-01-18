@@ -1,6 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Trispace&display=swap");
 body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
+  background: linear-gradient(
+    135deg,
+    rgb(82, 229, 231) 10%,
+    rgb(19, 12, 183) 100%
+  );
 }
 body.active {
   overflow: hidden;
@@ -68,7 +74,7 @@ header li {
 }
 header a {
   display: block;
-  color: #3498db;
+  color: #000000;
   padding: 10px;
 }
 header a:hover {
@@ -162,11 +168,11 @@ footer {
 }
 .social a {
   display: block;
-  color: #74808a;
+  color: #000000;
   padding: 10px;
 }
 .social a:hover {
-  color: #3498db;
+  color: #ffffff;
 }
 .btn-rounded-white {
   display: inline-block;
@@ -205,9 +211,7 @@ footer {
   margin: 0 auto;
   background: #3498db;
 }
-.background-alt {
-  background: #f2f2f5;
-}
+
 #lead {
   position: relative;
   height: 100vh;
@@ -219,12 +223,26 @@ footer {
   overflow: hidden;
 }
 #lead-content {
+  display: flex;
   position: absolute;
   z-index: 10;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+.lead-content-first {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  left: 148px;
+  top: 40px;
+  width: 640px;
+}
+.lead-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
 }
 #lead-content h1,
 #lead-content h2 {
@@ -252,12 +270,12 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 1;
   background: linear-gradient(
     135deg,
-    rgb(82, 229, 231) 10%,
-    rgb(19, 12, 183) 100%
+    rgb(82, 229, 231, 0.6) 10%,
+    rgb(19, 12, 183, 0.6) 100%
   );
-  z-index: 1;
 }
 #lead-down {
   position: absolute;
@@ -287,6 +305,17 @@ footer {
 .c3d {
   position: relative;
   z-index: 100;
+  width: 60vw;
+}
+.lead-text {
+  font-family: "Style Script", cursive;
+  font-size: 50px;
+  font-weight: 100;
+  color: #000959;
+}
+#typed-text {
+  color: #9803b0;
+  font-family: "Style Script", cursive;
 }
 @keyframes pulsate {
   0% {
@@ -301,13 +330,12 @@ footer {
 }
 #about {
   padding: 75px 15px;
-  border-bottom: 1px solid #dcd9d9;
 }
 #about h2 {
-  color: #374054;
+  color: #ffffff;
 }
 #about p {
-  color: #74808a;
+  color: #2b2b2b;
   margin: 0;
 }
 #experience {
@@ -445,11 +473,10 @@ footer {
 }
 #projects {
   padding: 50px 15px;
-  border-bottom: 1px solid #dcd9d9;
   text-align: center;
 }
 #projects h2 {
-  color: #374054;
+  color: hsl(0, 0%, 100%);
   margin-bottom: 50px;
 }
 .project {
@@ -463,12 +490,15 @@ footer {
 .project-image {
   float: left;
 }
+.imgProj {
+  width: 400px;
+}
 .project-info {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   margin-left: 300px;
-  padding: 15px;
+  padding: 0 0 0 103px;
 }
 .project-info h3 {
   font-size: 1.5em;
@@ -495,32 +525,20 @@ footer {
   text-align: center;
 }
 #skills h2 {
-  color: #374054;
+  color: #ffffff;
   margin-bottom: 50px;
 }
-#skills ul {
-  display: block;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 800px;
-}
 #skills li {
-  display: inline-block;
-  margin: 7px;
-  padding: 5px 10px;
-  color: #374054;
-  background: #e4e4ea;
-  list-style: none;
-  cursor: default;
-  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  flex-wrap: wrap;
+}
+.imgSkill {
+  width: 120px;
 }
 #contact {
   padding: 50px 15px;
-  background: linear-gradient(
-    135deg,
-    rgb(82, 229, 231) 10%,
-    rgb(19, 12, 183) 100%
-  );
   text-align: center;
 }
 #contact h2 {
@@ -540,7 +558,7 @@ footer {
   border-radius: 4px;
   border: none;
   margin-bottom: 10px;
-  background: #1d6fa5;
+  background: #1b2226e3;
   color: #fff;
   transition: 0.5s ease all;
 }
@@ -578,7 +596,7 @@ footer {
   border-radius: 4px;
   padding: 5px 10px;
   border: none;
-  color: #3498db;
+  color: #000000;
   font-weight: 700;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: 0.5s ease all;
@@ -642,6 +660,78 @@ footer {
     margin-left: 70px;
   }
 }
+@media only screen and (min-width: 2200px) {
+  .lead-text {
+    font-size: 50px;
+  }
+  .lead-content-first {
+    top: 60px;
+  }
+}
+@media only screen and (max-width: 2200px) {
+  .lead-text {
+    font-size: 50px;
+  }
+  .lead-content-first {
+    top: 60px;
+  }
+}
+@media only screen and (max-width: 1800px) {
+  .lead-text {
+    font-size: 45px;
+  }
+  .lead-content-first {
+    top: 55px;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .lead-text {
+    font-size: 45px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #lead {
+    height: auto;
+    min-height: auto;
+    max-height: auto;
+    padding: 100px 15px;
+  }
+  #lead-content {
+    position: relative;
+    transform: none;
+    left: auto;
+    top: auto;
+  }
+  #lead-content h1 {
+    font-size: 3em;
+  }
+  #lead-content h2 {
+    font-size: 1.75em;
+  }
+  #about {
+    text-align: center;
+  }
+  #about p {
+    text-align: left;
+  }
+  .lead-text {
+    font-size: 31px;
+  }
+  .lead-content-first {
+    left: 90px;
+    top: 20px;
+    width: 100vw;
+  }
+  .lead-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  #typed-text {
+    color: #9803b0;
+    font-family: "Style Script", cursive;
+  }
+}
 @media only screen and (max-width: 992px) {
   #lead {
     height: auto;
@@ -666,6 +756,26 @@ footer {
   }
   #about p {
     text-align: left;
+  }
+  .c3d {
+    display: none;
+  }
+  .lead-text {
+    font-size: 31px;
+  }
+  .lead-content-first {
+    left: 0;
+    top: 0;
+    width: 100vw;
+  }
+  .lead-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  #typed-text {
+    color: #9803b0;
+    font-family: "Style Script", cursive;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -724,6 +834,25 @@ footer {
   .social {
     text-align: center;
   }
+  .c3d {
+    display: none;
+  }
+  .lead-text {
+    font-size: 31px;
+  }
+  .lead-content-first {
+    left: 0;
+    top: 0;
+  }
+  .lead-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  #typed-text {
+    color: #9803b0;
+    font-family: "Style Script", cursive;
+  }
 }
 @media only screen and (max-width: 480px) {
   #lead-content h1 {
@@ -735,5 +864,24 @@ footer {
   #lead-content a {
     font-size: 0.9em;
     padding: 5px 10px;
+  }
+  .c3d {
+    display: none;
+  }
+  .lead-text {
+    font-size: 31px;
+  }
+  .lead-content-first {
+    left: 0;
+    top: 0;
+  }
+  .lead-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  #typed-text {
+    color: #9803b0;
+    font-family: "Style Script", cursive;
   }
 }
