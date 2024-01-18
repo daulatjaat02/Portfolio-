@@ -162,7 +162,7 @@
 //////////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function () {
   var typed = new Typed("#typed-text", {
-    strings: ["hrough code", "hrough  design", "hrough  creativity"],
+    strings: ["code", "design", "creativity"],
     typeSpeed: 40,
     backSpeed: 100,
     backDelay: 2000,
